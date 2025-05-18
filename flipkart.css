@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header {
+  background: #f0df28;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  max-width: 564px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-btn {
+  padding: 8px 22px;
+  background: white;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  color: #2874f0;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: rgb(59, 17, 211);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.categories {
+  padding: 16px 0;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.category-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  text-align: center;
+  cursor: pointer;
+  padding: 8px;
+  flex: 1;
+  min-width: 100px;
+}
+
+.category-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.category-item p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.products {
+  padding: 24px 0;
+  background: #f1f3f6;
+  min-height: 60vh;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: white;
+  padding: 16px;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.product-title {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #212121;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  background: #388e3c;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.footer {
+  background: #f8e300;
+  color: #500ced;
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3 {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #2874f0;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #454d5e;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  color: #370cd3;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .category-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 8px;
+    gap: 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-item {
+    flex: 0 0 auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-left, .footer-bottom-right {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+      grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+      font-size: 12px;
+      gap: 16px;
+  }
+
+  .section-title {
+      font-size: 18px;
+  }
+}
